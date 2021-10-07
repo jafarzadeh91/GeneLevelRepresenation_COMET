@@ -1,0 +1,9 @@
+#!/bin/bash
+#PBS -q medium
+#PBS -l walltime=12:00:00
+#PBS -l mem=10gb
+#PBS -l nodes=1:ppn=4
+#PBS -S /bin/bash
+cd /zfs/users/sina.jafarzadeh/MLCB_extension/mlcb
+/nfs/37zfs1-packages/Matlab/R2015b/bin/matlab -nodisplay -nosplash -nodisplay -nodesktop  -r "optimization_type='$1';i=$2;Optimization;" 
+
